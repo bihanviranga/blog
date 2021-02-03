@@ -1,4 +1,5 @@
 <script>
+	import { posts } from "../posts";
 </script>
 
 <style>
@@ -33,3 +34,12 @@
 <h1>Hello, world!</h1>
 
 <p>This is a simple description about my blog.</p>
+
+{#each posts as post}
+	<article>
+		<a href={`/blog/${post.permalink}`}>
+			<h2>{post.title}</h2>
+			<p>{post.summary}</p>
+		</a>
+	</article>
+{/each}
