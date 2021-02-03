@@ -2,6 +2,7 @@
 title: Example post
 summary: This is a summary
 date: 2021-02-03
+slug: example-two
 ---
 
 # This is a markdown post
