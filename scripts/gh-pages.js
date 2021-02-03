@@ -5,12 +5,13 @@ ghpages.publish(
   {
     branch: 'gh-pages',
     repo: 'https://github.com/bihanviranga/blog.git',
-    user: {
-      name: 'Bihan Viranga',
-      email: 'bihanviranga@gmail.com',
-    },
   },
-  () => {
-    console.log('[gh-pages] Deployment complete!');
+  (err) => {
+    if (err) {
+      console.log('[gh-pages] Deployment failed!');
+      console.log(err);
+    } else {
+      console.log('[gh-pages] Deployment complete!');
+    }
   }
 );
